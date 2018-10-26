@@ -16,10 +16,7 @@
   "autoload": {
     "psr-4": {
       "Phore\\StatusPage\\": "src/"
-    },
-    "files": [
-      "config.php"
-    ]
+    }
   },
   "minimum-stability": "dev"
 }
