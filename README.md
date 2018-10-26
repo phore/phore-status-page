@@ -1,5 +1,11 @@
 # Phore Status Page - Fastest way to generate a Status page
 
+Quick prototyping framework. Includes:
+
+- [Bootstrap 4](https://getbootstrap.com)
+- [CoreUI](https://coreui.io/)
+- [FontAwesome](https://fontawesome.com)
+
 ## Quick start
 
 Your brand new status page can look like this within 30 seconds.
