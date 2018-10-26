@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a591a7d1715925b21a017cfcceabcd4d",
+    "content-hash": "07e2ddd574d531e708ac876d3d566345",
     "packages": [
         {
             "name": "phore/di-base",
@@ -105,7 +105,7 @@
         },
         {
             "name": "phore/micro-app",
-            "version": "dev-master",
+            "version": "v0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-micro-app.git",
@@ -190,7 +190,7 @@
         },
         {
             "name": "phore/theme-coreui",
-            "version": "dev-master",
+            "version": "v0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-theme-coreui.git",
@@ -282,9 +282,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "phore/theme-coreui": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

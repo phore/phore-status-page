@@ -43,6 +43,7 @@ class StatusPageApp extends App
         $this->theme->sidebarMenu = [];
         $this->theme->header_menu_main = [];
         $this->theme->header_badgebar = [];
+        $this->theme->showBreadcrumbs = false;
         $this->theme->footer = [];
     }
 
