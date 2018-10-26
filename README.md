@@ -28,7 +28,27 @@ $app->addPage("/", function () {
 $app->serve();
 ```
 
+Create a `.htaccess` file to define the fallback-resource:
+(If using kickstart, define `apache_fallback_resource: "/index.php"` in your `.kick.yml`)
+```
+FallbackResource /index.php
+```
+
 ***Done!***
 
 
-## Examples
+## Authentication (HTTP Basic)
+
+```php
+<?php 
+$app = new BasicAuthStatusPageApp();
+$app->allowUser("admin", "admin");
+
+```
+
+
+## Features
+
+### Tables
+
+

@@ -46,7 +46,7 @@ class BasicAuthStatusPageApp extends StatusPageApp
      * @param array $metaData
      * @return BasicAuthStatusPageApp
      */
-    public function addAllowUser ($username, $password, $metaData=[]) : self
+    public function allowUser ($username, $password, $metaData=[]) : self
     {
         $this->basicUserProvider->addUser($username, $password, "@user", $metaData);
         return $this;
