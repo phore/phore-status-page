@@ -1,0 +1,25 @@
+{
+  "name": "phore/status-page",
+  "description": "Project description",
+  "keywords": ["Keyword1", "Keyword2"],
+  "license": "Proprietary",
+  "authors": [
+    { "name": "Matthias Leuffen", "email": "m@tth.es" }
+  ],
+  "repositories": [
+  ],
+  "require": {
+    "php": ">=7.1",
+    "phore/micro-app": "*",
+    "phore/theme-coreui": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Phore\\StatusPage\\": "src/"
+    },
+    "files": [
+      "config.php"
+    ]
+  },
+  "minimum-stability": "dev"
+}

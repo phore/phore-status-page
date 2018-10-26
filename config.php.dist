@@ -1,0 +1,11 @@
+<?php
+/**
+ * This file is copied to config.php by kick
+ *
+ * Placeholders (\%CONF_ENVNAME\%) are being replaced by the values found in environment.
+ * See .kick.yml config_file section.
+ *
+ * Original file by kickstart-skel/php-app-base
+ */
+
+define("CONF_DUMMY_VALUE", "%CONF_DUMMY_VALUE%");
