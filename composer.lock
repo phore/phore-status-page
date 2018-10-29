@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "07e2ddd574d531e708ac876d3d566345",
+    "content-hash": "8097a0076ea051cabc9927c436812c39",
     "packages": [
         {
             "name": "phore/di-base",
@@ -190,16 +190,16 @@
         },
         {
             "name": "phore/theme-coreui",
-            "version": "v0.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-theme-coreui.git",
-                "reference": "4548c65fc537685c66cba0ac7586c9209ed49ed1"
+                "reference": "ec6b5c00717943526b0a3ae2cc8f195a694157ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-theme-coreui/zipball/4548c65fc537685c66cba0ac7586c9209ed49ed1",
-                "reference": "4548c65fc537685c66cba0ac7586c9209ed49ed1",
+                "url": "https://api.github.com/repos/phore/phore-theme-coreui/zipball/ec6b5c00717943526b0a3ae2cc8f195a694157ac",
+                "reference": "ec6b5c00717943526b0a3ae2cc8f195a694157ac",
                 "shasum": ""
             },
             "require": {
@@ -227,7 +227,7 @@
                     "email": "leuffen@continue.de"
                 }
             ],
-            "time": "2018-08-10T09:24:25+00:00"
+            "time": "2018-10-29T17:02:35+00:00"
         },
         {
             "name": "psr/container",
@@ -282,7 +282,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "phore/theme-coreui": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
