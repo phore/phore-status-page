@@ -31,12 +31,17 @@ class StatusPageApp extends App
         $this->activateExceptionErrorHandlers();
         $this->setOnExceptionHandler(new JsonExceptionHandler());
 
+        $this->assets("/assets")->addAssetSearchPath(getcwd() . "/assets");
+
         $this->addModule(new CoreUiModule());
 
         if (get_class($this) == StatusPageApp::class) {
             $this->acl->addRule(aclRule()->ALLOW());
         }
         $this->theme = new CoreUi_Config_PageWithSidebar();
+
+        $this->theme->brandLogoUrl = "/assets/brand-logo.png";
+        $this->theme->favicon = "/assets/favicon.png";
 
         $this->theme->title = $title;
         $this->theme->brandName = $title;
