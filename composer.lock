@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8097a0076ea051cabc9927c436812c39",
+    "content-hash": "9ec05fef1311505d911e34800f267209",
     "packages": [
         {
             "name": "phore/di-base",
@@ -63,12 +63,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-html.git",
-                "reference": "9dd9fbebec17afbf559cc6b25b56a13c6a728ccb"
+                "reference": "3f004a51f378e14715f5717c7da234e86983e6e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-html/zipball/9dd9fbebec17afbf559cc6b25b56a13c6a728ccb",
-                "reference": "9dd9fbebec17afbf559cc6b25b56a13c6a728ccb",
+                "url": "https://api.github.com/repos/phore/phore-html/zipball/3f004a51f378e14715f5717c7da234e86983e6e5",
+                "reference": "3f004a51f378e14715f5717c7da234e86983e6e5",
                 "shasum": ""
             },
             "require": {
@@ -101,7 +101,7 @@
                     "email": "leuffen@continue.de"
                 }
             ],
-            "time": "2018-10-26T14:42:44+00:00"
+            "time": "2018-10-30T15:02:20+00:00"
         },
         {
             "name": "phore/micro-app",
@@ -150,7 +150,7 @@
         },
         {
             "name": "phore/theme-bootstrap",
-            "version": "dev-master",
+            "version": "v0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-theme-bootstrap.git",
@@ -194,17 +194,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-theme-coreui.git",
-                "reference": "ec6b5c00717943526b0a3ae2cc8f195a694157ac"
+                "reference": "7ddc6a50461c62deb9da4dcdb4443c62a34d41be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-theme-coreui/zipball/ec6b5c00717943526b0a3ae2cc8f195a694157ac",
-                "reference": "ec6b5c00717943526b0a3ae2cc8f195a694157ac",
+                "url": "https://api.github.com/repos/phore/phore-theme-coreui/zipball/7ddc6a50461c62deb9da4dcdb4443c62a34d41be",
+                "reference": "7ddc6a50461c62deb9da4dcdb4443c62a34d41be",
                 "shasum": ""
             },
             "require": {
-                "phore/html": "dev-master",
-                "phore/theme-bootstrap": "dev-master",
+                "phore/theme-bootstrap": "^0.1",
                 "php": ">7.0"
             },
             "require-dev": {
@@ -227,7 +226,8 @@
                     "email": "leuffen@continue.de"
                 }
             ],
-            "time": "2018-10-29T17:02:35+00:00"
+            "description": "CoreUI theme",
+            "time": "2018-10-30T11:17:46+00:00"
         },
         {
             "name": "psr/container",
@@ -283,7 +283,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "phore/theme-coreui": 20
+        "phore/theme-coreui": 20,
+        "phore/html": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -11,12 +11,16 @@
   "require": {
     "php": ">=7.1",
     "phore/micro-app": "^0.2",
-    "phore/theme-coreui": "^0.1"
+    "phore/theme-coreui": "dev-master",
+    "phore/html": "dev-master"
   },
   "autoload": {
     "psr-4": {
       "Phore\\StatusPage\\": "src/"
-    }
+    },
+    "files": [
+      "src/functions.php"
+    ]
   },
   "minimum-stability": "dev"
 }
