@@ -26,4 +26,7 @@ $app->addPage("/cards", function () {
 }, new NaviButtonWithIcon("Cards", "fas fa-table"));
 
 
+$app->addPage("/subapp", function() {}, new NaviButtonWithIcon("Sub Application", "fas fa-time"));
+
+
 $app->serve();

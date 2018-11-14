@@ -13,6 +13,8 @@ use Phore\MicroApp\App;
 use Phore\MicroApp\Handler\JsonExceptionHandler;
 use Phore\StatusPage\PageHandler\NaviButton;
 use Phore\StatusPage\PageHandler\PlainPage;
+use Phore\Theme\Bootstrap\Bootstrap4_Config;
+use Phore\Theme\CoreUI\CoreUI;
 use Phore\Theme\CoreUI\CoreUi_Config_PageWithSidebar;
 use Phore\Theme\CoreUI\CoreUiModule;
 
@@ -24,24 +26,29 @@ class StatusPageApp extends App
      */
     public $theme;
 
-    public function __construct(string $title = "unnamed system")
+    public function __construct(string $title = "unnamed system", string $routingStartPath = "")
     {
         parent::__construct();
 
         $this->activateExceptionErrorHandlers();
         $this->setOnExceptionHandler(new JsonExceptionHandler());
 
-        $this->assets("/assets")->addAssetSearchPath(getcwd() . "/assets");
+        $this->assets("$routingStartPath/assets")
+            ->addAssetSearchPath(getcwd() . "/assets")
+            ->addAssetSearchPath(Bootstrap4_Config::ASSETS_DIR_BOOTSTAP)
+            ->addAssetSearchPath(CoreUI::COREUI_ASSET_PATH);
 
         $this->addModule(new CoreUiModule());
+
 
         if (get_class($this) == StatusPageApp::class) {
             $this->acl->addRule(aclRule()->ALLOW());
         }
         $this->theme = new CoreUi_Config_PageWithSidebar();
+        $this->theme->assetPath = "$routingStartPath/assets";
 
-        $this->theme->brandLogoUrl = "/assets/brand-logo.png";
-        $this->theme->favicon = "/assets/favicon.png";
+        $this->theme->brandLogoUrl = "$routingStartPath/assets/brand-logo.png";
+        $this->theme->favicon = "$routingStartPath/assets/favicon.png";
 
         $this->theme->title = $title;
         $this->theme->brandName = $title;

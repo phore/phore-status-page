@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9ec05fef1311505d911e34800f267209",
+    "content-hash": "f92ab886afd2e7c45da7fb1324d46a28",
     "packages": [
         {
             "name": "phore/di-base",
@@ -106,16 +106,16 @@
         },
         {
             "name": "phore/micro-app",
-            "version": "v0.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-micro-app.git",
-                "reference": "733358386c285acd969d5e7db27ef8a6bf660cac"
+                "reference": "de2a8e259c78559511b1b5a94d5a25029b8ec96b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-micro-app/zipball/733358386c285acd969d5e7db27ef8a6bf660cac",
-                "reference": "733358386c285acd969d5e7db27ef8a6bf660cac",
+                "url": "https://api.github.com/repos/phore/phore-micro-app/zipball/de2a8e259c78559511b1b5a94d5a25029b8ec96b",
+                "reference": "de2a8e259c78559511b1b5a94d5a25029b8ec96b",
                 "shasum": ""
             },
             "require": {
@@ -147,20 +147,20 @@
                 }
             ],
             "description": "Micro framework for rest api webservices",
-            "time": "2018-09-18T10:17:39+00:00"
+            "time": "2018-11-12T14:28:36+00:00"
         },
         {
             "name": "phore/theme-bootstrap",
-            "version": "v0.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-theme-bootstrap.git",
-                "reference": "86826cfc43f04a28d897d736a36014e6aff77aa7"
+                "reference": "b6064657dc15a7a51fe41ab5c34d1d4e55b21b10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-theme-bootstrap/zipball/86826cfc43f04a28d897d736a36014e6aff77aa7",
-                "reference": "86826cfc43f04a28d897d736a36014e6aff77aa7",
+                "url": "https://api.github.com/repos/phore/phore-theme-bootstrap/zipball/b6064657dc15a7a51fe41ab5c34d1d4e55b21b10",
+                "reference": "b6064657dc15a7a51fe41ab5c34d1d4e55b21b10",
                 "shasum": ""
             },
             "require": {
@@ -187,7 +187,7 @@
                     "email": "leuffen@continue.de"
                 }
             ],
-            "time": "2018-08-23T16:34:09+00:00"
+            "time": "2018-11-14T13:15:16+00:00"
         },
         {
             "name": "phore/theme-coreui",
@@ -195,16 +195,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-theme-coreui.git",
-                "reference": "7ddc6a50461c62deb9da4dcdb4443c62a34d41be"
+                "reference": "21d029c96757ac1aba398a3d371854f2d59e5bc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-theme-coreui/zipball/7ddc6a50461c62deb9da4dcdb4443c62a34d41be",
-                "reference": "7ddc6a50461c62deb9da4dcdb4443c62a34d41be",
+                "url": "https://api.github.com/repos/phore/phore-theme-coreui/zipball/21d029c96757ac1aba398a3d371854f2d59e5bc1",
+                "reference": "21d029c96757ac1aba398a3d371854f2d59e5bc1",
                 "shasum": ""
             },
             "require": {
-                "phore/theme-bootstrap": "^0.1",
+                "phore/theme-bootstrap": ">=0.1",
                 "php": ">7.0"
             },
             "require-dev": {
@@ -228,7 +228,7 @@
                 }
             ],
             "description": "CoreUI theme",
-            "time": "2018-10-30T11:17:46+00:00"
+            "time": "2018-11-14T13:16:24+00:00"
         },
         {
             "name": "psr/container",
