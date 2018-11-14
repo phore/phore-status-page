@@ -2,7 +2,7 @@
   "name": "phore/status-page",
   "description": "Project description",
   "keywords": ["Keyword1", "Keyword2"],
-  "license": "Proprietary",
+  "license": "MIT",
   "authors": [
     { "name": "Matthias Leuffen", "email": "m@tth.es" }
   ],
