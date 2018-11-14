@@ -55,6 +55,31 @@ $app->allowUser("admin", "admin");
 
 ## Features
 
+### Mouting the application in a subdirectory
+
+Just create a subdirectory and a `.htaccess` file pointing to 
+the subdirectories index file:
+
+```
+FallbackResource /subdir/index.php
+```
+
+Create the `index.php` and specifiy the subdirectories name
+as second constructor argument:
+
+```php
+<?php
+
+$app = new StatusPageApp("SomeName", "/subdir");
+$app->addPage("/subdir/", function() {
+    return ["h1"=>"SubApp"];
+});
+$app->serve();
+```
+
+
+
+
 ### Tables
 
 
