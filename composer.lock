@@ -63,12 +63,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-html.git",
-                "reference": "3f004a51f378e14715f5717c7da234e86983e6e5"
+                "reference": "50fb97beace5c97f12275e982182f4852b6a220e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-html/zipball/3f004a51f378e14715f5717c7da234e86983e6e5",
-                "reference": "3f004a51f378e14715f5717c7da234e86983e6e5",
+                "url": "https://api.github.com/repos/phore/phore-html/zipball/50fb97beace5c97f12275e982182f4852b6a220e",
+                "reference": "50fb97beace5c97f12275e982182f4852b6a220e",
                 "shasum": ""
             },
             "require": {
@@ -77,6 +77,7 @@
             },
             "require-dev": {
                 "erusev/parsedown-extra": "^0.7.1",
+                "phpunit/phpunit": "^7.4",
                 "psr/http-message": "^1.0"
             },
             "suggest": {
@@ -101,7 +102,7 @@
                     "email": "leuffen@continue.de"
                 }
             ],
-            "time": "2018-10-30T15:02:20+00:00"
+            "time": "2018-10-31T16:17:08+00:00"
         },
         {
             "name": "phore/micro-app",
