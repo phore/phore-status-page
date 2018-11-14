@@ -25,9 +25,9 @@ class BasicAuthStatusPageApp extends StatusPageApp
 
 
 
-    public function __construct(string $title = "unnamed system")
+    public function __construct(string $title = "unnamed system", string $routingStartPath = "")
     {
-        parent::__construct($title);
+        parent::__construct($title, $routingStartPath);
 
         $this->authManager->setAuthMech(new HttpBasicAuthMech());
         $this->authManager->setUserProvider($this->basicUserProvider = new BasicUserProvider(true));
