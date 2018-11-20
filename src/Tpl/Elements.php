@@ -9,6 +9,7 @@
 namespace Phore\StatusPage\Tpl;
 
 
+use Phore\Html\Elements\HtmlElementNode;
 use Phore\Html\Elements\TextNode;
 
 class Elements
@@ -29,6 +30,13 @@ class Elements
         return $with;
     }
 
+    
+    public function a(string $href, $body)
+    {
+        return fhtml("a @href=:href", ["href" => $href])->content($body);
+    }
+    
+    
     public function card($header=null, $body=null, $footer=null)
     {
         return [
@@ -71,10 +79,16 @@ class Elements
 
             foreach ($cols as $colName) {
                 $tdData = isset ($rowData[$colName]) ? $rowData[$colName] : null;
+                if ($tdData instanceof HtmlElementNode) {
+                    $tr["td"]->content($tdData);
+                    continue;
+                }
                 if (isset ($colRenderer[$colName]) && is_callable($colRenderer[$colName])) {
                     $tr["td"] = ($colRenderer[$colName])($tdData, $rowData, $colName);
                     continue;
                 }
+
+
                 $tr["td"]->text((string)$tdData);
             }
 

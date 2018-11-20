@@ -11,6 +11,7 @@ namespace Phore\StatusPage\PageHandler;
 
 use Phore\MicroApp\App;
 use Phore\MicroApp\Type\Request;
+use Phore\MicroApp\Type\RouteParams;
 use Phore\StatusPage\StatusPageApp;
 use Phore\Theme\CoreUI\CoreUi_PageWithSidebar;
 
@@ -25,9 +26,12 @@ class PlainPage
     }
 
 
-    public function on_get(StatusPageApp $app)
+    public function on_get(StatusPageApp $app, RouteParams $routeParams, Request $request)
     {
-        $params = $app->buildParametersFor($this->cb);
+        $params = $app->buildParametersFor($this->cb, [
+            "routeParams" => $routeParams,
+            "request" => $request
+        ]);
         $content = ($this->cb)(...$params);
         $pageConfig = clone $app->theme;
         $pageConfig->mainContent = $content;
