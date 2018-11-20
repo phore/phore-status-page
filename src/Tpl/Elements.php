@@ -55,6 +55,33 @@ class Elements
     }
 
 
+    
+    public function basic_table (array $header=null, array $data, array $cssTdClasses=[])
+    {
+        $table = fhtml("table @table {$this->_getWith()}");
+        $cols = [];
+        if ($header !== null) {
+            $head = $table["thead"]["tr"];
+            foreach ($header as $name) {
+                $head[] = fhtml("th")->content($name);
+            }
+        }
+        $tBody = $table["tbody"];
+        
+        foreach ($data as $rowData) {
+            $tr = fhtml("tr");
+            foreach ($rowData as $idx => $tdData) {
+                if (isset ($cssTdClasses[$idx])) {
+                    $tr["td {$cssTdClasses[$idx]}"] = $tdData;
+                } else {
+                    $tr["td"] = $tdData;
+                }
+            }
+            $tBody[] = $tr;
+        }
+        return $table;
+    }
+    
 
     public function table(array $data, $header=null, callable $rowRenderer = null, $colRenderer=[])
     {
@@ -81,6 +108,10 @@ class Elements
                 $tdData = isset ($rowData[$colName]) ? $rowData[$colName] : null;
                 if ($tdData instanceof HtmlElementNode) {
                     $tr["td"]->content($tdData);
+                    continue;
+                }
+                if (is_array($tdData)) {
+                    $tr["td"]->tpl($tdData);
                     continue;
                 }
                 if (isset ($colRenderer[$colName]) && is_callable($colRenderer[$colName])) {
