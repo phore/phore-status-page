@@ -62,8 +62,11 @@ class Elements
         $cols = [];
         if ($header !== null) {
             $head = $table["thead"]["tr"];
-            foreach ($header as $name) {
-                $head[] = fhtml("th")->content($name);
+            foreach ($header as $idx => $name) {
+                $css = "";
+                if (isset($cssTdClasses[$idx]))
+                    $css = $cssTdClasses[$idx];
+                $head[] = fhtml("th $css")->content($name);
             }
         }
         $tBody = $table["tbody"];
