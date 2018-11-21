@@ -10,6 +10,7 @@ namespace Phore\StatusPage\PageHandler;
 
 
 use Phore\MicroApp\App;
+use Phore\MicroApp\Type\QueryParams;
 use Phore\MicroApp\Type\Request;
 use Phore\MicroApp\Type\RouteParams;
 use Phore\StatusPage\StatusPageApp;
@@ -29,6 +30,7 @@ class PlainPage
     public function on_get(StatusPageApp $app, RouteParams $routeParams, Request $request)
     {
         $params = $app->buildParametersFor($this->cb, [
+            "app" => $app,
             "routeParams" => $routeParams,
             "request" => $request
         ]);
