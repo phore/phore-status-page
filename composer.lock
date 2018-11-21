@@ -4,8 +4,50 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f92ab886afd2e7c45da7fb1324d46a28",
+    "content-hash": "cacb7ad351e61ad3eec3aaa0b7d95df8",
     "packages": [
+        {
+            "name": "phore/core",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phore/phore-core.git",
+                "reference": "316711b1fdaffe71b27148a4293e9d56e26b7df6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phore/phore-core/zipball/316711b1fdaffe71b27148a4293e9d56e26b7df6",
+                "reference": "316711b1fdaffe71b27148a4293e9d56e26b7df6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "nette/tester": "^2.1@dev"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Phore\\Core\\": "src/"
+                },
+                "files": [
+                    "src/functions.inc.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias Leuffen",
+                    "email": "m@tth.es"
+                }
+            ],
+            "description": "Phore core library",
+            "time": "2018-11-20T15:34:42+00:00"
+        },
         {
             "name": "phore/di-base",
             "version": "v2.1.1",
@@ -195,12 +237,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-theme-coreui.git",
-                "reference": "21d029c96757ac1aba398a3d371854f2d59e5bc1"
+                "reference": "acf96b7999030b73b7ed01f886a94608cbb4d125"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-theme-coreui/zipball/21d029c96757ac1aba398a3d371854f2d59e5bc1",
-                "reference": "21d029c96757ac1aba398a3d371854f2d59e5bc1",
+                "url": "https://api.github.com/repos/phore/phore-theme-coreui/zipball/acf96b7999030b73b7ed01f886a94608cbb4d125",
+                "reference": "acf96b7999030b73b7ed01f886a94608cbb4d125",
                 "shasum": ""
             },
             "require": {
@@ -228,7 +270,7 @@
                 }
             ],
             "description": "CoreUI theme",
-            "time": "2018-11-14T13:16:24+00:00"
+            "time": "2018-11-20T17:59:20+00:00"
         },
         {
             "name": "psr/container",
@@ -285,7 +327,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "phore/theme-coreui": 20,
-        "phore/html": 20
+        "phore/html": 20,
+        "phore/core": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

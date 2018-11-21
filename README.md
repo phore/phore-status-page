@@ -82,4 +82,24 @@ $app->serve();
 
 ### Tables
 
+```php
+<?php
+$data = ["a", "b", "c"];
+
+$tblData = phore_array_transform($data, function($key, $value) {
+    return [
+        date ("Y-m-d"),
+        ["a @href=/some/other" => "Hello Column"]
+    ];
+});
+
+$tbl = pt()->basic_table(
+    ["Date",    "Comment"],
+    $tblData,
+    ["",        "@align=right"]
+);
+
+```
+
+
 
