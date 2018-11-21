@@ -54,6 +54,16 @@ class Elements
         ];
     }
 
+    
+    public function alert($content)
+    {
+        if ($content instanceof \Exception) {
+            $content = [
+                "b" => $content->getMessage(),
+            ];
+        }
+        return fhtml("div @alert @alert-danger @role=alert")->content($content);
+    }
 
     
     public function basic_table (array $header=null, array $data, array $cssTdClasses=[])
