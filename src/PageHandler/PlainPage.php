@@ -29,12 +29,22 @@ class PlainPage
 
     public function on_get(StatusPageApp $app, RouteParams $routeParams, Request $request)
     {
-        $params = $app->buildParametersFor($this->cb, [
+        $defParam = [
             "app" => $app,
             "routeParams" => $routeParams,
             "request" => $request
-        ]);
+        ];
+        foreach ($routeParams->list() as $key) {
+            $defParam[$key] = $routeParams->get($key);
+        }
+
+        $params = $app->buildParametersFor($this->cb, $defParam);
+        
         $content = ($this->cb)(...$params);
+        
+        if ($content === true)
+            return true;
+        
         $pageConfig = clone $app->theme;
         $pageConfig->mainContent = $content;
 
