@@ -1,0 +1,71 @@
+<html>
+<body>
+
+
+<main>
+
+    <ps-form>
+        <div>
+
+            <input type="text">
+            <input type="submit" value="Senden">
+        </div>
+    </ps-form>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<script>
+
+    /*
+    Vue.component('ps-form', {
+
+        data: function () {
+            return {
+                form: {
+                    form_a: "alsdk"
+                }
+            }
+        },
+
+        beforeCreate: function () {
+          console.log("data", this.$data);
+          console.log("default", this);
+          console.log("slot", this.$scopedSlots.default);
+
+          console.log(this.$slots.default[0]);
+
+            this.app = new Vue({
+                el: this.$slots.default[0].el,
+                data: function () {
+                    return {
+                        form: {
+                            form_a: "alsdk"
+                        }
+                    }
+                }
+            });
+          //this.$scopedSlots.default.$data = this.$data;
+
+        },
+
+        methods: {
+            on_submit: function($event, $data) {
+              $event.preventDefault();
+              console.log(JSON.stringify(this.$parent.$data));
+              return false;
+            },
+        },
+
+
+        template: "<form v-on:submit='on_submit'><input type='text'>{{ form }}<slot></slot></form>"
+    });
+    */
+
+    var app = new Vue({
+        el: "ps-form"
+
+    });
+</script>
+</body>
+</html>

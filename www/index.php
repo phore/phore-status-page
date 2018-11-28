@@ -21,9 +21,20 @@ $app->addPage("/tables", function () {
 }, new NaviButtonWithIcon("Tables", "fas fa-table"));
 
 // Define the Cards site
+$app->addPage("/basic_table", function () {
+    return require __DIR__ . "/inc/basic_tables.php";
+}, new NaviButtonWithIcon("Basic Table", "fas fa-table"));
+
+// Define the Cards site
 $app->addPage("/cards", function () {
     return require __DIR__ . "/inc/cards.php";
 }, new NaviButtonWithIcon("Cards", "fas fa-table"));
+
+$app->addPage("/vue-elements", function () {
+    return require __DIR__ . "/inc/vue-elements.php";
+}, new NaviButtonWithIcon("Vue Elements", "fas fa-table"));
+
+
 
 
 $app->addPage("/subapp", function() {}, new NaviButtonWithIcon("Sub Application", "fas fa-time"));

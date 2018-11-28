@@ -36,7 +36,14 @@ class StatusPageApp extends App
         $this->assets("$routingStartPath/assets")
             ->addAssetSearchPath(getcwd() . "/assets")
             ->addAssetSearchPath(Bootstrap4_Config::ASSETS_DIR_BOOTSTAP)
-            ->addAssetSearchPath(CoreUI::COREUI_ASSET_PATH);
+            ->addAssetSearchPath(CoreUI::COREUI_ASSET_PATH)
+            ->addVirtualAsset("all.js", [
+                __DIR__ . "/../js-src/ps-table.js",
+                __DIR__ . "/../js-src/ps-button.js",
+                __DIR__ . "/../js-src/ps-form.js",
+                __DIR__ . "/../js-src/ps-app.js"
+            ]);
+
 
         $this->addModule(new CoreUiModule());
 
@@ -45,6 +52,8 @@ class StatusPageApp extends App
             $this->acl->addRule(aclRule()->ALLOW());
         }
         $this->theme = new CoreUi_Config_PageWithSidebar();
+
+        $this->theme->frameworks["vue"] = true;
         $this->theme->assetPath = "$routingStartPath/assets";
 
         $this->theme->brandLogoUrl = "$routingStartPath/assets/brand-logo.png";

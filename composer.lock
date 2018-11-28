@@ -12,19 +12,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-core.git",
-                "reference": "316711b1fdaffe71b27148a4293e9d56e26b7df6"
+                "reference": "948ca749f58b849163f56a45263b895e9e88e1eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-core/zipball/316711b1fdaffe71b27148a4293e9d56e26b7df6",
-                "reference": "316711b1fdaffe71b27148a4293e9d56e26b7df6",
+                "url": "https://api.github.com/repos/phore/phore-core/zipball/948ca749f58b849163f56a45263b895e9e88e1eb",
+                "reference": "948ca749f58b849163f56a45263b895e9e88e1eb",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
             },
             "require-dev": {
-                "nette/tester": "^2.1@dev"
+                "phpunit/phpunit": "^8.0@dev"
             },
             "type": "library",
             "autoload": {
@@ -46,7 +46,7 @@
                 }
             ],
             "description": "Phore core library",
-            "time": "2018-11-20T15:34:42+00:00"
+            "time": "2018-11-22T11:18:33+00:00"
         },
         {
             "name": "phore/di-base",
