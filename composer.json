@@ -12,8 +12,8 @@
     "php": ">=7.1",
     "phore/micro-app": ">=0.2",
     "phore/theme-coreui": "^0.1",
-    "phore/html": "dev-master",
-    "phore/core": "dev-master"
+    "phore/html": "^0.1",
+    "phore/core": "*"
   },
   "autoload": {
     "psr-4": {
