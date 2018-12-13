@@ -11,8 +11,8 @@
   "require": {
     "php": ">=7.1",
     "phore/micro-app": ">=0.2",
-    "phore/theme-coreui": "^0.1",
-    "phore/html": "^0.1",
+    "phore/theme-coreui": ">=0.2",
+    "phore/html": ">=0.2",
     "phore/core": "*"
   },
   "autoload": {

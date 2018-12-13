@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="http://localhost/assets/all.css"/>
+    <link rel="icon" href="assets/favicon.png"/>
+    <style>.brand-img { background-image: url(assets/brand-logo.png); }</style>
+    <meta charset="utf-8"/>
+    <title>phore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" crossorigin="anonymous" href="assets/bs/css/bootstrap.min.css"/>
+    <link rel="stylesheet" crossorigin="anonymous" href="assets/fontawesome/css/all.css"/>
+    <link rel="stylesheet" crossorigin="anonymous" href="assets/highlightjs/styles/github.css"/>
+    <link rel="stylesheet" crossorigin="anonymous" href="assets/coreui.css"/>
+    <link rel="stylesheet" crossorigin="anonymous" href="assets/coreui-user-styles.css"/>
+  </head>
+  <body class=" app header-fixed sidebar-lg-show sidebar-fixed">
+    <header class=" app-header navbar">
+      <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="cards.html#">
+        <i class="brand-img navbar-brand-img navbar-brand-full"></i>
+        <i class="brand-img navbar-brand-img navbar-brand-minimized"></i>
+        <span class="brand-name d-md-down-none navbar-brand-full">phore</span>
+      </a>
+      <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="nav navbar-nav d-md-down-none"></ul>
+      <ul class="nav navbar-nav ml-auto"></ul>
+      <div style="width:20px"></div>
+    </header>
+    <div class="app-body">
+      <div class="sidebar">
+        <nav class="sidebar-nav">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <i class="fas fa-home nav-icon"></i> Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tables.html">
+                <i class="fas fa-table nav-icon"></i> Tables
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="basic_table.html">
+                <i class="fas fa-table nav-icon"></i> Basic Table
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cards.html">
+                <i class="fas fa-table nav-icon"></i> Cards
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vue-elements.html">
+                <i class="fas fa-table nav-icon"></i> Vue Elements
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="subapp.html">
+                <i class="fas fa-time nav-icon"></i> Sub Application
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+      </div>
+      <main class="main">
+        <ol class="breadcrumb breadcrumb-empty"></ol>
+        <div class="container-fluid">
+          <div id="coreui_main_content" class="animated fadein">
+            <div class="row">
+              <div class="col-md-4 col-12">
+                <div class="card bg-warning text-center text-white">
+                  <div class="card-header">Title</div>
+                  <div class="card-body">
+                    <blockquote>
+                      <p>I'm big</p>
+                      <footer>and love fishes</footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-12">
+                <div class="card bg-success text-center text-white">
+                  <div class="card-header">Title</div>
+                  <div class="card-body">
+                    <blockquote>
+                      <p>I'm big</p>
+                      <footer>and love fishes</footer>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="ed23d8ca00cfbfc898901774fee5bdfb" role="dialog">
+                <div class="modal-dialog modal-lg" role="document" style="width:90%">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">View Code</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <pre>
+                        <code class="php">$t = $doc[&quot;@row&quot;];
+$t[&quot;@col-6&quot;][] = pt()-&gt;card(&quot;Header 1&quot;, &quot;Also&quot;);
+$t[&quot;@col-6&quot;][] = pt()-&gt;card([&quot;Header with badge&quot;, &quot;span @badge @badge-success @float-right&quot;=&gt;&quot;Success&quot;], &quot;Also&quot;);
+
+$t = $doc[&quot;@row&quot;];
+$t[&quot;@col-12&quot;][] = pt()-&gt;card(&quot;Just one row&quot;);
+
+$t = $doc[&quot;@row&quot;];
+$t[&quot;@col-4&quot;][] =
+    pt(&quot;@bg-primary @text-center @text-white&quot;)-&gt;card(null, [&quot;blockquote&quot; =&gt; [&quot;p&quot;=&gt;&quot;I have no title&quot;, &quot;footer&quot;=&gt;&quot;and primary&quot;]]);
+
+$t[&quot;@col-4&quot;][] =
+    pt(&quot;@bg-warning @text-center @text-white&quot;)-&gt;card(null, [&quot;blockquote&quot; =&gt; [&quot;p&quot;=&gt;&quot;I have no title&quot;, &quot;footer&quot;=&gt;&quot;and warning&quot;]]);
+
+$t[&quot;@col-4&quot;][] =
+    pt(&quot;@bg-success @text-center @text-white&quot;)-&gt;card(null, [&quot;blockquote&quot; =&gt; [&quot;p&quot;=&gt;&quot;I have no title&quot;, &quot;footer&quot;=&gt;&quot;and success&quot;]]);
+
+$t = $doc[&quot;@row&quot;];
+$t[&quot;@col-md-4 @col-12&quot;][] =
+    pt(&quot;@bg-warning @text-center @text-white&quot;)-&gt;card(&quot;Title&quot;, [&quot;blockquote&quot; =&gt; [&quot;p&quot;=&gt;&quot;I'm big&quot;, &quot;footer&quot;=&gt;&quot;and love fishes&quot;]]);
+
+
+$t[&quot;@col-md-4 @col-12&quot;][] =
+    pt(&quot;@bg-success @text-center @text-white&quot;)-&gt;card(&quot;Title&quot;, [&quot;blockquote&quot; =&gt; [&quot;p&quot;=&gt;&quot;I'm big&quot;, &quot;footer&quot;=&gt;&quot;and love fishes&quot;]]);
+                        </code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container text-center">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ed23d8ca00cfbfc898901774fee5bdfb">
+                  <i class="fas fa-code"></i> view source
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <aside class="aside-menu"></aside>
+    </div>
+    <footer class="app-footer"></footer>
+    <script language="javascript" crossorigin="anonymous" src="assets/jquery-3.3.1.min.js"></script>
+    <script language="javascript" crossorigin="anonymous" src="assets/bs/js/bootstrap.min.js"></script>
+    <script language="javascript" crossorigin="anonymous" src="assets/vue-2.5.17.js"></script>
+    <script language="javascript" crossorigin="anonymous" src="assets/highlightjs/highlight.pack.js"></script>
+    <script language="javascript" crossorigin="anonymous" src="assets/highlightjs/run_highlight.js"></script>
+    <script language="javascript" crossorigin="anonymous" src="assets/coreui.min.js"></script>
+    <script language="javascript" crossorigin="anonymous" src="assets/pace.min.js"></script>
+    <script language="javascript" crossorigin="anonymous" src="assets/perfect-scrollbar.min.js"></script>
+  </body>
+  <script language="javascript" src="assets/all.js"></script>
+</html>

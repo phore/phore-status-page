@@ -9,7 +9,10 @@
 namespace App;
 
 use Phore\Html\Fhtml\FHtml;
+use Phore\Html\Helper\Highlighter;
 use Phore\Html\Helper\Table;
+
+$h = new Highlighter();
 
 $doc = fhtml();
 
@@ -27,4 +30,9 @@ $doc[] = pt()->basic_table(
     $tblData,
     ["",        "@align=right"]
 );
+
+$h->end_recording();
+
+$doc[] = pt()->view_code($h->getCode());
+
 return $doc;

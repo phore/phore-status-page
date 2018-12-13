@@ -1,18 +1,22 @@
 <?php
+
+
+
 namespace App;
-use Phore\Html\Helper\Table;
-use Phore\StatusPage\PageHandler\NaviButton;
+use Phore\Html\Helper\Highlighter;
 use Phore\StatusPage\PageHandler\NaviButtonWithIcon;
 use Phore\StatusPage\StatusPageApp;
-
 require __DIR__ . "/../vendor/autoload.php";
 
-$app = new StatusPageApp("MyApp");
 
+$hl = new Highlighter();
+
+$app = new StatusPageApp("phore");
+$app->theme->frameworks["highlightjs"] = true;
 
 // Define the Routes:
-$app->addPage("/", function () {
-    return ["h1" => "hello world"];
+$app->addPage("/", function () use ($hl) {
+    return ["h1" => "phore/status-page", pt()->view_code($hl->getCode())];
 }, new NaviButtonWithIcon("Home", "fas fa-home"));
 
 // Define the Tables site
@@ -35,9 +39,9 @@ $app->addPage("/vue-elements", function () {
 }, new NaviButtonWithIcon("Vue Elements", "fas fa-table"));
 
 
-
-
 $app->addPage("/subapp", function() {}, new NaviButtonWithIcon("Sub Application", "fas fa-time"));
 
-
+$hl->end_recording();
 $app->serve();
+
+

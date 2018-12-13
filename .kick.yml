@@ -7,3 +7,5 @@ command:
   build:
     - "composer update"
 
+  build_docs:
+    - "cd /opt/docs && wget --recursive --no-clobber --page-requisites --html-extension --convert-links --restrict-file-names=windows --domains localhost --no-parent localhost"

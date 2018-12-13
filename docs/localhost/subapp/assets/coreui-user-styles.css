@@ -1,0 +1,18 @@
+.brand-img {
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    width: 35px;
+    height: 35px;
+}
+
+.brand-name {
+    padding-left: 10px;
+    color: #000;
+}
+
+/* class is set if breadcrumb is deactivated */
+.breadcrumb-empty {
+    height: 0;
+    padding: 0;
+}

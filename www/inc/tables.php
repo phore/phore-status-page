@@ -9,7 +9,10 @@
 namespace App;
 
 use Phore\Html\Fhtml\FHtml;
+use Phore\Html\Helper\Highlighter;
 use Phore\Html\Helper\Table;
+
+$h = new Highlighter();
 
 $doc = fhtml();
 
@@ -62,6 +65,9 @@ $doc[] = $row = fhtml("@row");
 $row["@col-6"] = pt()->card("Usage Report", $table);
 $row["@col-6"] = pt()->card("Usage Report2", $table);
 
+$h->end_recording();
+
+$doc[] = pt()->view_code($h->getCode());
 
 
 return $doc;

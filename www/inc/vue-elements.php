@@ -5,6 +5,12 @@
  * Date: 22.11.18
  * Time: 13:27
  */
+
+namespace App;
+
+use Phore\Html\Helper\Highlighter;
+
+$h = new Highlighter();
 $doc = fhtml();
 
 $doc[] = [
@@ -16,5 +22,7 @@ $doc[] = [
         ]
     ]
 ];
+$h->end_recording();
 
+$doc[] = pt()->view_code($h->getCode());
 return $doc;

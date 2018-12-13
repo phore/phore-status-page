@@ -1,0 +1,319 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="http://localhost/assets/all.css"/>
+    <link rel="icon" href="assets/favicon.png"/>
+    <style>.brand-img { background-image: url(assets/brand-logo.png); }</style>
+    <meta charset="utf-8"/>
+    <title>phore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" crossorigin="anonymous" href="assets/bs/css/bootstrap.min.css"/>
+    <link rel="stylesheet" crossorigin="anonymous" href="assets/fontawesome/css/all.css"/>
+    <link rel="stylesheet" crossorigin="anonymous" href="assets/highlightjs/styles/github.css"/>
+    <link rel="stylesheet" crossorigin="anonymous" href="assets/coreui.css"/>
+    <link rel="stylesheet" crossorigin="anonymous" href="assets/coreui-user-styles.css"/>
+  </head>
+  <body class=" app header-fixed sidebar-lg-show sidebar-fixed">
+    <header class=" app-header navbar">
+      <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="tables.html#">
+        <i class="brand-img navbar-brand-img navbar-brand-full"></i>
+        <i class="brand-img navbar-brand-img navbar-brand-minimized"></i>
+        <span class="brand-name d-md-down-none navbar-brand-full">phore</span>
+      </a>
+      <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="nav navbar-nav d-md-down-none"></ul>
+      <ul class="nav navbar-nav ml-auto"></ul>
+      <div style="width:20px"></div>
+    </header>
+    <div class="app-body">
+      <div class="sidebar">
+        <nav class="sidebar-nav">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <i class="fas fa-home nav-icon"></i> Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tables.html">
+                <i class="fas fa-table nav-icon"></i> Tables
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="basic_table.html">
+                <i class="fas fa-table nav-icon"></i> Basic Table
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cards.html">
+                <i class="fas fa-table nav-icon"></i> Cards
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vue-elements.html">
+                <i class="fas fa-table nav-icon"></i> Vue Elements
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="subapp.html">
+                <i class="fas fa-time nav-icon"></i> Sub Application
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+      </div>
+      <main class="main">
+        <ol class="breadcrumb breadcrumb-empty"></ol>
+        <div class="container-fluid">
+          <div id="coreui_main_content" class="animated fadein">
+            <div class="row">
+              <div class="col-6">
+                <div class="card">
+                  <div class="card-header">Table striped</div>
+                  <div class="card-body">
+                    <table class="table table-responsive-sm table-striped">
+                      <thead>
+                        <tr>
+                          <th>Column 1</th>
+                          <th>Column 2</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Column 1 Data</td>
+                          <td>Column 2 Data</td>
+                        </tr>
+                        <tr>
+                          <td>Col 1 Row 2 Data</td>
+                          <td>Col 2 Row 2 Data</td>
+                        </tr>
+                        <tr>
+                          <td>Col 1 Row 3 Data</td>
+                          <td>Col 2 Row 3 Data</td>
+                        </tr>
+                        <tr>
+                          <td>Col 1 Row 4 Data</td>
+                          <td>Col 2 Row 4 Data</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card">
+                  <div class="card-header">Table bordered</div>
+                  <div class="card-body">
+                    <table class="table table-responsive-sm table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Column 1</th>
+                          <th>Column 2</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Column 1 Data</td>
+                          <td>Column 2 Data</td>
+                        </tr>
+                        <tr>
+                          <td>Col 1 Row 2 Data</td>
+                          <td>Col 2 Row 2 Data</td>
+                        </tr>
+                        <tr>
+                          <td>Col 1 Row 3 Data</td>
+                          <td>Col 2 Row 3 Data</td>
+                        </tr>
+                        <tr>
+                          <td>Col 1 Row 4 Data</td>
+                          <td>Col 2 Row 4 Data</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">Table with individual renderers (row-Renderer and column-Renderer)</div>
+                  <div class="card-body">
+                    <table class="table table-responsive-sm table-striped">
+                      <thead>
+                        <tr>
+                          <th>Column 1</th>
+                          <th>Column 2</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Column 1 Data</td>
+                          <td>Column 2 Data</td>
+                          <td>
+                            <button class="btn btn-primary">Click</button>
+                          </td>
+                        </tr>
+                        <tr class=" bg-success">
+                          <td>Col 1 Row 2 Data</td>
+                          <td>Col 2 Row 2 Data</td>
+                          <td>
+                            <button class="btn btn-primary">Click</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Col 1 Row 3 Data</td>
+                          <td>Col 2 Row 3 Data</td>
+                          <td>
+                            <button class="btn btn-primary">Click</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Col 1 Row 4 Data</td>
+                          <td>Col 2 Row 4 Data</td>
+                          <td>
+                            <button class="btn btn-primary">Click</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="card">
+                  <div class="card-header">Usage Report</div>
+                  <div class="card-body">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <td>#</td>
+                          <td>Name</td>
+                          <td>Description</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="bg-primary"></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card">
+                  <div class="card-header">Usage Report2</div>
+                  <div class="card-body">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <td>#</td>
+                          <td>Name</td>
+                          <td>Description</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="bg-primary"></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade" id="caa281da5f81ae7c0b0190570ce4b8ff" role="dialog">
+              <div class="modal-dialog modal-lg" role="document" style="width:90%">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">View Code</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <pre>
+                      <code class="php">$doc = fhtml();
+
+$tableData = [
+    [&quot;col1&quot; =&gt; &quot;Column 1 Data&quot;, &quot;col2&quot; =&gt; &quot;Column 2 Data&quot;],
+    [&quot;col1&quot; =&gt; &quot;Col 1 Row 2 Data&quot;, &quot;col2&quot; =&gt; &quot;Col 2 Row 2 Data&quot;],
+    [&quot;col1&quot; =&gt; &quot;Col 1 Row 3 Data&quot;, &quot;col2&quot; =&gt; &quot;Col 2 Row 3 Data&quot;],
+    [&quot;col1&quot; =&gt; &quot;Col 1 Row 4 Data&quot;, &quot;col2&quot; =&gt; &quot;Col 2 Row 4 Data&quot;]
+];
+
+
+$doc[] = $row = fhtml(&quot;@row&quot;);
+$row[&quot;@col-6&quot;] = pt()-&gt;card(
+    &quot;Table striped&quot;,
+    pt(&quot;@table-responsive-sm @table-striped&quot;)-&gt;table($tableData, [&quot;col1&quot;=&gt;&quot;Column 1&quot;, &quot;col2&quot; =&gt; &quot;Column 2&quot;])
+);
+
+$row[&quot;@col-6&quot;] = pt()-&gt;card(
+    &quot;Table bordered&quot;,
+    pt(&quot;@table-responsive-sm @table-bordered&quot;)-&gt;table($tableData, [&quot;col1&quot;=&gt;&quot;Column 1&quot;, &quot;col2&quot; =&gt; &quot;Column 2&quot;])
+);
+
+// Full row with both: row-Renderer and column-Renderer
+$row = $doc[&quot;@row&quot;];
+$row[&quot;@col-12&quot;] = pt()-&gt;card(
+    &quot;Table with individual renderers (row-Renderer and column-Renderer)&quot;,
+    pt(&quot;@table-responsive-sm @table-striped&quot;)-&gt;table(
+        $tableData,
+        [&quot;col1&quot;=&gt;&quot;Column 1&quot;, &quot;col2&quot; =&gt; &quot;Column 2&quot;, &quot;action&quot;=&gt;&quot;&quot;],
+        function (FHtml $tr, $rowData) {
+            if ($rowData[&quot;col1&quot;] == &quot;Col 1 Row 2 Data&quot;)
+                $tr-&gt;alter(&quot;@bg-success&quot;);
+            return $tr;
+        },
+        [
+            &quot;action&quot; =&gt; function ($data, $rowData) {
+                return [&quot;button @btn @btn-primary&quot; =&gt; &quot;Click&quot;];
+            }
+        ]
+
+    )
+);
+
+
+
+$table = new Table([&quot;#&quot;, &quot;Name&quot;, &quot;Description&quot;]);
+$table-&gt;row([1, &quot;Some Name&quot;, &quot;Some Description&quot;], &quot;@class=bg-primary&quot;);
+
+$doc[] = $row = fhtml(&quot;@row&quot;);
+$row[&quot;@col-6&quot;] = pt()-&gt;card(&quot;Usage Report&quot;, $table);
+$row[&quot;@col-6&quot;] = pt()-&gt;card(&quot;Usage Report2&quot;, $table);
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container text-center">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#caa281da5f81ae7c0b0190570ce4b8ff">
+                <i class="fas fa-code"></i> view source
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
+      <aside class="aside-menu"></aside>
+    </div>
+    <footer class="app-footer"></footer>
+    <script language="javascript" crossorigin="anonymous" src="assets/jquery-3.3.1.min.js"></script>
+    <script language="javascript" crossorigin="anonymous" src="assets/bs/js/bootstrap.min.js"></script>
+    <script language="javascript" crossorigin="anonymous" src="assets/vue-2.5.17.js"></script>
+    <script language="javascript" crossorigin="anonymous" src="assets/highlightjs/highlight.pack.js"></script>
+    <script language="javascript" crossorigin="anonymous" src="assets/highlightjs/run_highlight.js"></script>
+    <script language="javascript" crossorigin="anonymous" src="assets/coreui.min.js"></script>
+    <script language="javascript" crossorigin="anonymous" src="assets/pace.min.js"></script>
+    <script language="javascript" crossorigin="anonymous" src="assets/perfect-scrollbar.min.js"></script>
+  </body>
+  <script language="javascript" src="assets/all.js"></script>
+</html>
