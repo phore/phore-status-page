@@ -8,4 +8,4 @@ command:
     - "composer update"
 
   build_docs:
-    - "cd /opt/docs && wget --recursive --no-clobber --page-requisites --html-extension --convert-links --restrict-file-names=windows --domains localhost --no-parent localhost"
+    - "sudo apt-get install wget && cd /opt/docs && cp /opt/README.md /opt/docs/index.md && wget --recursive --no-clobber --page-requisites --html-extension --convert-links --restrict-file-names=windows --domains localhost --no-parent localhost"
