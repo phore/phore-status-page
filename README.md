@@ -6,6 +6,8 @@ Quick prototyping framework. Includes:
 - [CoreUI](https://coreui.io/)
 - [FontAwesome](https://fontawesome.com)
 
+See our **[Interactive Demo](https://phore.github.io/phore-status-page/localhost/)**!
+
 ## Quick start
 
 Your brand new status page can look like this within 30 seconds.
