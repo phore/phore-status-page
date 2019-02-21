@@ -38,10 +38,7 @@ class StatusPageApp extends App
             ->addAssetSearchPath(Bootstrap4_Config::ASSETS_DIR_BOOTSTAP)
             ->addAssetSearchPath(CoreUI::COREUI_ASSET_PATH)
             ->addVirtualAsset("all.js", [
-                __DIR__ . "/../js-src/ps-table.js",
-                __DIR__ . "/../js-src/ps-button.js",
-                __DIR__ . "/../js-src/ps-form.js",
-                __DIR__ . "/../js-src/ps-app.js"
+               
             ]);
 
 
