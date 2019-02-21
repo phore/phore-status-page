@@ -49,8 +49,7 @@ class StatusPageApp extends App
             $this->acl->addRule(aclRule()->ALLOW());
         }
         $this->theme = new CoreUi_Config_PageWithSidebar();
-
-        $this->theme->frameworks["vue"] = true;
+        
         $this->theme->assetPath = "$routingStartPath/assets";
 
         $this->theme->brandLogoUrl = "$routingStartPath/assets/brand-logo.png";
