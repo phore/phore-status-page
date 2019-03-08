@@ -1,17 +1,17 @@
 [
   {
-    "icon": "fas fa-home",
-    "name": "Pages",
+    "icon": "fas fa-sitemap",
+    "name": "Switch",
     "href": "#",
     "children": [
       {
-        "name": "Basic",
-        "href": "/PageWithHeader"
+        "name": "System 1",
+        "href": "http://some.service/abc"
+      },
+      {
+        "name": "System 2",
+        "href": "http://some.service2/abc"
       }
     ]
-  },
-  {
-    "name": "Users",
-    "href": "#"
   }
 ]
