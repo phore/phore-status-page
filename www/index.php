@@ -4,6 +4,7 @@
 
 namespace App;
 use Phore\Html\Helper\Highlighter;
+use Phore\StatusPage\Mod\ModInterMicroServiceNavigaion;
 use Phore\StatusPage\PageHandler\NaviButtonWithIcon;
 use Phore\StatusPage\StatusPageApp;
 require __DIR__ . "/../vendor/autoload.php";
@@ -12,6 +13,7 @@ require __DIR__ . "/../vendor/autoload.php";
 $hl = new Highlighter();
 
 $app = new StatusPageApp("phore");
+$app->addModule(new ModInterMicroServiceNavigaion("http://localhost/assets/mod_inter_mico_service_nav.json"));
 $app->theme->frameworks["highlightjs"] = true;
 
 // Define the Routes:
@@ -40,6 +42,7 @@ $app->addPage("/vue-elements", function () {
 
 
 $app->addPage("/subapp", function() {}, new NaviButtonWithIcon("Sub Application", "fas fa-time"));
+
 
 $hl->end_recording();
 $app->serve();

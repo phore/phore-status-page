@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-core.git",
-                "reference": "b388e34c0a6a96f6afa62cef3713d7add58984ae"
+                "reference": "7c4ae1c29b3f557ffc1e098f580a02c32d027a43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-core/zipball/b388e34c0a6a96f6afa62cef3713d7add58984ae",
-                "reference": "b388e34c0a6a96f6afa62cef3713d7add58984ae",
+                "url": "https://api.github.com/repos/phore/phore-core/zipball/7c4ae1c29b3f557ffc1e098f580a02c32d027a43",
+                "reference": "7c4ae1c29b3f557ffc1e098f580a02c32d027a43",
                 "shasum": ""
             },
             "require": {
@@ -46,7 +46,7 @@
                 }
             ],
             "description": "Phore core library",
-            "time": "2018-12-13T14:17:07+00:00"
+            "time": "2019-03-06T21:34:40+00:00"
         },
         {
             "name": "phore/di-base",
@@ -153,12 +153,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-micro-app.git",
-                "reference": "820e478a6a53d7f274348620c4fff2362675e2ed"
+                "reference": "b9fcf0dde1827b0debc54701b7718d44a45d3eb3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-micro-app/zipball/820e478a6a53d7f274348620c4fff2362675e2ed",
-                "reference": "820e478a6a53d7f274348620c4fff2362675e2ed",
+                "url": "https://api.github.com/repos/phore/phore-micro-app/zipball/b9fcf0dde1827b0debc54701b7718d44a45d3eb3",
+                "reference": "b9fcf0dde1827b0debc54701b7718d44a45d3eb3",
                 "shasum": ""
             },
             "require": {
@@ -190,7 +190,7 @@
                 }
             ],
             "description": "Micro framework for rest api webservices",
-            "time": "2018-11-27T13:40:55+00:00"
+            "time": "2019-02-13T11:50:36+00:00"
         },
         {
             "name": "phore/theme-bootstrap",
@@ -198,12 +198,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-theme-bootstrap.git",
-                "reference": "cefc77835ed47b787cc5643ce347df2c704da680"
+                "reference": "aa33088778698de5605128d0fca41822a5076602"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-theme-bootstrap/zipball/cefc77835ed47b787cc5643ce347df2c704da680",
-                "reference": "cefc77835ed47b787cc5643ce347df2c704da680",
+                "url": "https://api.github.com/repos/phore/phore-theme-bootstrap/zipball/aa33088778698de5605128d0fca41822a5076602",
+                "reference": "aa33088778698de5605128d0fca41822a5076602",
                 "shasum": ""
             },
             "require": {
@@ -231,7 +231,7 @@
                 }
             ],
             "description": "Bootstrap 4 Theme using fluent HTML",
-            "time": "2018-12-13T13:46:17+00:00"
+            "time": "2019-02-21T22:10:54+00:00"
         },
         {
             "name": "phore/theme-coreui",
@@ -280,12 +280,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/container.git",
-                "reference": "2cc4a01788191489dc7459446ba832fa79a216a7"
+                "reference": "014d250daebff39eba15ba990eeb2a140798e77c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/container/zipball/2cc4a01788191489dc7459446ba832fa79a216a7",
-                "reference": "2cc4a01788191489dc7459446ba832fa79a216a7",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/014d250daebff39eba15ba990eeb2a140798e77c",
+                "reference": "014d250daebff39eba15ba990eeb2a140798e77c",
                 "shasum": ""
             },
             "require": {
@@ -321,7 +321,7 @@
                 "container-interop",
                 "psr"
             ],
-            "time": "2017-06-28T15:35:32+00:00"
+            "time": "2018-12-29T15:36:03+00:00"
         }
     ],
     "packages-dev": [],

@@ -81,6 +81,4 @@ class StatusPageApp extends App
     }
 
 
-
-
 }
