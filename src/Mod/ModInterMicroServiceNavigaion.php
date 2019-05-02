@@ -38,7 +38,13 @@ class ModInterMicroServiceNavigaion implements AppModule
         if (!$app instanceof StatusPageApp)
             throw new \InvalidArgumentException("This app is no StatusPageApp");
 
-        $data = json_decode(file_get_contents($this->configUrl), true);
-        $app->theme->header_menu_main = $data;
+        try {
+            $data = json_decode(file_get_contents($this->configUrl), true);
+            $app->theme->header_menu_main = $data;
+        } catch (\ErrorException $e) {
+            
+            // Ignore error
+        }
+
     }
 }
