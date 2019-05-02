@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-core.git",
-                "reference": "7c4ae1c29b3f557ffc1e098f580a02c32d027a43"
+                "reference": "0f3c0741a40a8fa1f7cecbda7338e13abd4c65ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-core/zipball/7c4ae1c29b3f557ffc1e098f580a02c32d027a43",
-                "reference": "7c4ae1c29b3f557ffc1e098f580a02c32d027a43",
+                "url": "https://api.github.com/repos/phore/phore-core/zipball/0f3c0741a40a8fa1f7cecbda7338e13abd4c65ef",
+                "reference": "0f3c0741a40a8fa1f7cecbda7338e13abd4c65ef",
                 "shasum": ""
             },
             "require": {
@@ -46,7 +46,7 @@
                 }
             ],
             "description": "Phore core library",
-            "time": "2019-03-06T21:34:40+00:00"
+            "time": "2019-04-26T16:16:41+00:00"
         },
         {
             "name": "phore/di-base",
@@ -105,12 +105,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-html.git",
-                "reference": "10b933876791cdf90156341f2e3c3c9234d1ffd4"
+                "reference": "26f21281bb5a7a2e20828cbdc16421f16fff8da9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-html/zipball/10b933876791cdf90156341f2e3c3c9234d1ffd4",
-                "reference": "10b933876791cdf90156341f2e3c3c9234d1ffd4",
+                "url": "https://api.github.com/repos/phore/phore-html/zipball/26f21281bb5a7a2e20828cbdc16421f16fff8da9",
+                "reference": "26f21281bb5a7a2e20828cbdc16421f16fff8da9",
                 "shasum": ""
             },
             "require": {
@@ -145,7 +145,7 @@
                 }
             ],
             "description": "Fluent HTML Template api",
-            "time": "2018-12-13T13:19:04+00:00"
+            "time": "2019-04-08T13:28:45+00:00"
         },
         {
             "name": "phore/micro-app",
@@ -153,22 +153,25 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-micro-app.git",
-                "reference": "b9fcf0dde1827b0debc54701b7718d44a45d3eb3"
+                "reference": "0c3eba562bf9c42e20c082fb0f37484496463d5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-micro-app/zipball/b9fcf0dde1827b0debc54701b7718d44a45d3eb3",
-                "reference": "b9fcf0dde1827b0debc54701b7718d44a45d3eb3",
+                "url": "https://api.github.com/repos/phore/phore-micro-app/zipball/0c3eba562bf9c42e20c082fb0f37484496463d5f",
+                "reference": "0c3eba562bf9c42e20c082fb0f37484496463d5f",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-yaml": "*",
-                "phore/di-base": "^2.1",
+                "phore/core": "dev-master",
+                "phore/di-base": "2.1.1",
                 "php": ">7.1"
             },
             "require-dev": {
-                "phore/theme-coreui": "dev-master"
+                "phore/http-client": "*",
+                "phore/theme-coreui": "dev-master",
+                "phpunit/phpunit": "*"
             },
             "type": "library",
             "autoload": {
@@ -190,7 +193,7 @@
                 }
             ],
             "description": "Micro framework for rest api webservices",
-            "time": "2019-02-13T11:50:36+00:00"
+            "time": "2019-05-02T11:34:27+00:00"
         },
         {
             "name": "phore/theme-bootstrap",
@@ -198,12 +201,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-theme-bootstrap.git",
-                "reference": "aa33088778698de5605128d0fca41822a5076602"
+                "reference": "b3b38f8f96c360f1a59423f8c1161c6c1428d447"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-theme-bootstrap/zipball/aa33088778698de5605128d0fca41822a5076602",
-                "reference": "aa33088778698de5605128d0fca41822a5076602",
+                "url": "https://api.github.com/repos/phore/phore-theme-bootstrap/zipball/b3b38f8f96c360f1a59423f8c1161c6c1428d447",
+                "reference": "b3b38f8f96c360f1a59423f8c1161c6c1428d447",
                 "shasum": ""
             },
             "require": {
@@ -211,6 +214,7 @@
                 "php": ">7.0"
             },
             "require-dev": {
+                "erusev/parsedown-extra": "dev-master",
                 "phore/micro-app": "*"
             },
             "type": "library",
@@ -231,7 +235,7 @@
                 }
             ],
             "description": "Bootstrap 4 Theme using fluent HTML",
-            "time": "2019-02-21T22:10:54+00:00"
+            "time": "2019-04-10T09:24:06+00:00"
         },
         {
             "name": "phore/theme-coreui",
@@ -239,12 +243,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-theme-coreui.git",
-                "reference": "c8dadc310e4738acfe0564bea3bdc073cce019e4"
+                "reference": "afdc045452e6f3b958ba08f5ce9280b13c4b861a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-theme-coreui/zipball/c8dadc310e4738acfe0564bea3bdc073cce019e4",
-                "reference": "c8dadc310e4738acfe0564bea3bdc073cce019e4",
+                "url": "https://api.github.com/repos/phore/phore-theme-coreui/zipball/afdc045452e6f3b958ba08f5ce9280b13c4b861a",
+                "reference": "afdc045452e6f3b958ba08f5ce9280b13c4b861a",
                 "shasum": ""
             },
             "require": {
@@ -272,7 +276,7 @@
                 }
             ],
             "description": "CoreUI theme",
-            "time": "2018-12-13T12:16:18+00:00"
+            "time": "2019-03-08T11:17:48+00:00"
         },
         {
             "name": "psr/container",

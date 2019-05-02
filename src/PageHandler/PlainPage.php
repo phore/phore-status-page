@@ -9,7 +9,9 @@
 namespace Phore\StatusPage\PageHandler;
 
 
+use Phore\Di\Container\Producer\DiValue;
 use Phore\MicroApp\App;
+use Phore\MicroApp\Type\Body;
 use Phore\MicroApp\Type\QueryParams;
 use Phore\MicroApp\Type\Request;
 use Phore\MicroApp\Type\RouteParams;
@@ -27,17 +29,9 @@ class PlainPage
     }
 
 
-    public function on_get(StatusPageApp $app, RouteParams $routeParams, Request $request)
+    public function on_get(StatusPageApp $app, array $__call_params)
     {
-        $defParam = [
-            "app" => $app,
-            "routeParams" => $routeParams,
-            "request" => $request
-        ];
-        foreach ($routeParams->list() as $key) {
-            $defParam[$key] = $routeParams->get($key);
-        }
-
+        $defParam = $__call_params;
         $params = $app->buildParametersFor($this->cb, $defParam);
         
         $content = ($this->cb)(...$params);
