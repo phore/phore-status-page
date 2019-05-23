@@ -11,6 +11,7 @@ namespace Phore\StatusPage\PageHandler;
 
 use Phore\Di\Container\Producer\DiValue;
 use Phore\MicroApp\App;
+use Phore\MicroApp\Response\Response;
 use Phore\MicroApp\Type\Body;
 use Phore\MicroApp\Type\QueryParams;
 use Phore\MicroApp\Type\Request;
@@ -38,6 +39,8 @@ class PlainPage
         
         if ($content === true)
             return true;
+        if ($content instanceof Response)
+            return $content;
         
         $pageConfig = clone $app->theme;
         $pageConfig->mainContent = $content;
