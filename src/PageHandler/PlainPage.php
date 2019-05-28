@@ -49,5 +49,4 @@ class PlainPage
         return true;
     }
 
-
 }

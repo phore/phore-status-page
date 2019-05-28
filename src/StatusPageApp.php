@@ -77,4 +77,38 @@ class StatusPageApp extends App
     }
 
 
+    public function addCtrl(string $className, NaviButton $naviButton=null) : App
+    {
+        if ( ! in_array(StatusPageController::class, class_implements($className))) {
+            return parent::addCtrl($className);
+        }
+        $ref = new \ReflectionClass($className);
+        if ( ! $ref->hasConstant("ROUTE")) {
+            throw new \InvalidArgumentException("Cannot add addCtrl($className): Class $className requires ROUTE constant.");
+        }
+
+        $route = $ref->getConstant("ROUTE");
+
+        if ( ! $ref->getMethod("on_get")->isPublic()) {
+            throw new \InvalidArgumentException("StatusPageController '$className' requires public method 'on_get'");
+        }
+
+        $page = new PlainPage(function () use ($className) {
+            $params = $this->buildParametersForConstructor($className);
+            $ctrl = new $className($params);
+            return $this([$ctrl, "on_get"]);
+        });
+        $this->router->get($route, [$page, "on_get"]);
+
+        if ($ref->hasMethod("on_post"))
+            $this->router->onPost($route, function () use ($className) {
+                $params = $this->buildParametersForConstructor($className);
+                $ctrl = new $className($params);
+                return $this([$ctrl, "on_post"]);
+            });
+        return $this;
+
+    }
+
+
 }
