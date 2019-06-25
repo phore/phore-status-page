@@ -93,18 +93,19 @@ class StatusPageApp extends App
             throw new \InvalidArgumentException("StatusPageController '$className' requires public method 'on_get'");
         }
 
-        $page = new PlainPage(function () use ($className) {
-            $params = $this->buildParametersForConstructor($className);
+        $page = new PlainPage(function (array $__call_params) use ($className) {
+            $params = $this->buildParametersForConstructor($className, $__call_params);
+
             $ctrl = new $className($params);
-            return $this([$ctrl, "on_get"]);
+            return $this([$ctrl, "on_get"], $__call_params);
         });
         $this->router->get($route, [$page, "on_get"]);
 
         if ($ref->hasMethod("on_post"))
-            $this->router->onPost($route, function () use ($className) {
-                $params = $this->buildParametersForConstructor($className);
+            $this->router->onPost($route, function (array $__call_params) use ($className) {
+                $params = $this->buildParametersForConstructor($className, $__call_params);
                 $ctrl = new $className($params);
-                return $this([$ctrl, "on_post"]);
+                return $this([$ctrl, "on_post"], $__call_params);
             });
         return $this;
 

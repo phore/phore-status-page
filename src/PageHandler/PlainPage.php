@@ -33,8 +33,10 @@ class PlainPage
     public function on_get(StatusPageApp $app, array $__call_params)
     {
         $defParam = $__call_params;
+
+        $defParam["__call_params"] = $__call_params;
         $params = $app->buildParametersFor($this->cb, $defParam);
-        
+
         $content = ($this->cb)(...$params);
         
         if ($content === true)
