@@ -116,6 +116,14 @@ class StatusPageApp extends App
                 return $this([$ctrl, "on_delete"], $__call_params);
             });
         }
+
+        if ($ref->hasMethod("on_put")) {
+            $this->router->onPut($route, function (array $__call_params) use ($className) {
+                $params = $this->buildParametersForConstructor($className, $__call_params);
+                $ctrl = new $className($params);
+                return $this([$ctrl, "on_put"], $__call_params);
+            });
+        }
         return $this;
 
     }
