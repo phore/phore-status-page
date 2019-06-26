@@ -110,7 +110,7 @@ class StatusPageApp extends App
         }
 
         if ($ref->hasMethod("on_delete")) {
-            $this->router->onPost($route, function (array $__call_params) use ($className) {
+            $this->router->onDelete($route, function (array $__call_params) use ($className) {
                 $params = $this->buildParametersForConstructor($className, $__call_params);
                 $ctrl = new $className($params);
                 return $this([$ctrl, "on_delete"], $__call_params);
