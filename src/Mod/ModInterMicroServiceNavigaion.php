@@ -39,7 +39,7 @@ class ModInterMicroServiceNavigaion implements AppModule
             throw new \InvalidArgumentException("This app is no StatusPageApp");
 
         try {
-            $data = json_decode(file_get_contents($this->configUrl), true);
+            $data = phore_http_request($this->configUrl)->withTimeout(0.2, 1)->send()->getBodyJson();
             $app->theme->header_menu_main = $data;
         } catch (\ErrorException $e) {
             
