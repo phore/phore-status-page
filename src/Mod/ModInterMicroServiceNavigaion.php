@@ -42,8 +42,10 @@ class ModInterMicroServiceNavigaion implements AppModule
             $data = phore_http_request($this->configUrl)->withTimeout(0.2, 1)->send()->getBodyJson();
             $app->theme->header_menu_main = $data;
         } catch (\ErrorException $e) {
-            
+            $app->theme->header_menu_main = "Error requesting data" . $e->getMessage()
             // Ignore error
+        } catch (\Exception $e) {
+            $app->theme->header_menu_main = "Error requesting data" . $e->getMessage()
         }
 
     }
