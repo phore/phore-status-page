@@ -41,12 +41,17 @@ class ModInterMicroServiceNavigaion implements AppModule
         try {
             $data = phore_http_request($this->configUrl)->withTimeout(0.2, 1)->send()->getBodyJson();
             $app->theme->header_menu_main = $data;
+            return;
         } catch (\ErrorException $e) {
-            $app->theme->header_menu_main = "Error requesting data" . $e->getMessage();
             // Ignore error
         } catch (\Exception $e) {
-            $app->theme->header_menu_main = "Error requesting data" . $e->getMessage();
         }
-
+        $app->theme->header_menu_main = [
+            [
+                "icon" => "fas fa-home",
+                "name" => $e->getMessage(),
+                "href" => "#"
+            ]
+        ];
     }
 }
