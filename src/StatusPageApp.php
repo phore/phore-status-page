@@ -26,7 +26,7 @@ class StatusPageApp extends App
      */
     public $theme;
 
-    public function __construct(string $title = "unnamed system", string $routingStartPath = "")
+    public function __construct(string $title = "unnamed system", string $routingStartPath = "", string $brandLogoFile = "")
     {
         parent::__construct();
 
@@ -52,7 +52,7 @@ class StatusPageApp extends App
         
         $this->theme->assetPath = "$routingStartPath/assets";
 
-        $this->theme->brandLogoUrl = "$routingStartPath/assets/brand-logo.png";
+        $this->theme->brandLogoUrl = $routingStartPath.$brandLogoFile;
         $this->theme->favicon = "$routingStartPath/assets/favicon.png";
 
         $this->theme->title = $title;
