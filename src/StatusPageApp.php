@@ -26,19 +26,22 @@ class StatusPageApp extends App
      */
     public $theme;
 
-    public function __construct(string $title = "unnamed system", string $routingStartPath = "", string $brandLogoFile = "")
+    public function __construct(string $title = "unnamed system", string $routingStartPath = "", string $brandLogoUri = null)
     {
         parent::__construct();
 
         $this->activateExceptionErrorHandlers();
         $this->setOnExceptionHandler(new JsonExceptionHandler());
 
+        if ($brandLogoUri === null)
+            $brandLogoUri = $routingStartPath . "/assets/brand-logo.png";
+
         $this->assets("$routingStartPath/assets")
             ->addAssetSearchPath(getcwd() . "/assets")
             ->addAssetSearchPath(Bootstrap4_Config::ASSETS_DIR_BOOTSTAP)
             ->addAssetSearchPath(CoreUI::COREUI_ASSET_PATH)
             ->addVirtualAsset("all.js", [
-               
+
             ]);
 
 
@@ -49,10 +52,10 @@ class StatusPageApp extends App
             $this->acl->addRule(aclRule()->ALLOW());
         }
         $this->theme = new CoreUi_Config_PageWithSidebar();
-        
+
         $this->theme->assetPath = "$routingStartPath/assets";
 
-        $this->theme->brandLogoUrl = $routingStartPath.$brandLogoFile;
+        $this->theme->brandLogoUrl = $brandLogoUri;
         $this->theme->favicon = "$routingStartPath/assets/favicon.png";
 
         $this->theme->title = $title;
