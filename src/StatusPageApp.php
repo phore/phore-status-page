@@ -42,7 +42,8 @@ class StatusPageApp extends App
             ->addAssetSearchPath(CoreUI::COREUI_ASSET_PATH)
             ->addVirtualAsset("all.js", [
 
-            ]);
+            ])
+            ->addVirtualAsset("all.css", []);
 
 
         $this->addModule(new CoreUiModule());
