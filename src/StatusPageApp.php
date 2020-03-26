@@ -40,9 +40,7 @@ class StatusPageApp extends App
             ->addAssetSearchPath(getcwd() . "/assets")
             ->addAssetSearchPath(Bootstrap4_Config::ASSETS_DIR_BOOTSTAP)
             ->addAssetSearchPath(CoreUI::COREUI_ASSET_PATH)
-            ->addVirtualAsset("all.js", [
-
-            ])
+            ->addVirtualAsset("all.js", [])
             ->addVirtualAsset("all.css", []);
 
 
