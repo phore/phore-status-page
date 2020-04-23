@@ -10,7 +10,7 @@
   ],
   "require": {
     "php": ">=7.1",
-    "phore/micro-app": ">=0.2",
+    "phore/micro-app": "*",
     "phore/theme-coreui": ">=0.2",
     "phore/html": ">=0.2",
     "phore/core": "*"

@@ -12,19 +12,27 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-core.git",
-                "reference": "0f3c0741a40a8fa1f7cecbda7338e13abd4c65ef"
+                "reference": "2a1f73db204064036f4fa7e13d22759e16065634"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-core/zipball/0f3c0741a40a8fa1f7cecbda7338e13abd4c65ef",
-                "reference": "0f3c0741a40a8fa1f7cecbda7338e13abd4c65ef",
+                "url": "https://api.github.com/repos/phore/phore-core/zipball/2a1f73db204064036f4fa7e13d22759e16065634",
+                "reference": "2a1f73db204064036f4fa7e13d22759e16065634",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
             },
             "require-dev": {
+                "ext-json": "*",
+                "ext-sodium": "*",
+                "ext-yaml": "*",
                 "phpunit/phpunit": "*"
+            },
+            "suggest": {
+                "ext-json": "Json encoding parsing",
+                "ext-sodium": "Encryption functions",
+                "ext-yaml": "Yaml encoding parsing"
             },
             "type": "library",
             "autoload": {
@@ -46,7 +54,8 @@
                 }
             ],
             "description": "Phore core library",
-            "time": "2019-04-26T16:16:41+00:00"
+            "homepage": "https://infracamp.org/project/phore",
+            "time": "2020-04-16T08:36:20+00:00"
         },
         {
             "name": "phore/di-base",
@@ -105,12 +114,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-html.git",
-                "reference": "26f21281bb5a7a2e20828cbdc16421f16fff8da9"
+                "reference": "30d75eb49daa904733d1025693c81a2a780bae05"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-html/zipball/26f21281bb5a7a2e20828cbdc16421f16fff8da9",
-                "reference": "26f21281bb5a7a2e20828cbdc16421f16fff8da9",
+                "url": "https://api.github.com/repos/phore/phore-html/zipball/30d75eb49daa904733d1025693c81a2a780bae05",
+                "reference": "30d75eb49daa904733d1025693c81a2a780bae05",
                 "shasum": ""
             },
             "require": {
@@ -141,11 +150,12 @@
             "authors": [
                 {
                     "name": "Matthias Leuffen",
-                    "email": "leuffen@continue.de"
+                    "email": "m@tth.es"
                 }
             ],
             "description": "Fluent HTML Template api",
-            "time": "2019-04-08T13:28:45+00:00"
+            "homepage": "https://infracamp.org/phore/",
+            "time": "2019-09-30T16:59:36+00:00"
         },
         {
             "name": "phore/micro-app",
@@ -153,24 +163,25 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-micro-app.git",
-                "reference": "0c3eba562bf9c42e20c082fb0f37484496463d5f"
+                "reference": "5b15041300f2156a674fb6311a5883db11131688"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-micro-app/zipball/0c3eba562bf9c42e20c082fb0f37484496463d5f",
-                "reference": "0c3eba562bf9c42e20c082fb0f37484496463d5f",
+                "url": "https://api.github.com/repos/phore/phore-micro-app/zipball/5b15041300f2156a674fb6311a5883db11131688",
+                "reference": "5b15041300f2156a674fb6311a5883db11131688",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-yaml": "*",
-                "phore/core": "dev-master",
+                "phore/core": "*",
                 "phore/di-base": "2.1.1",
-                "php": ">7.1"
+                "php": ">7.1",
+                "psr/log": "^1.1"
             },
             "require-dev": {
                 "phore/http-client": "*",
-                "phore/theme-coreui": "dev-master",
+                "phore/theme-coreui": "*",
                 "phpunit/phpunit": "*"
             },
             "type": "library",
@@ -189,11 +200,12 @@
             "authors": [
                 {
                     "name": "Matthias Leuffen",
-                    "email": "leuffen@continue.de"
+                    "email": "m@tth.es"
                 }
             ],
             "description": "Micro framework for rest api webservices",
-            "time": "2019-05-02T11:34:27+00:00"
+            "homepage": "https://infracamp.org/phore/",
+            "time": "2020-04-22T20:13:59+00:00"
         },
         {
             "name": "phore/theme-bootstrap",
@@ -201,12 +213,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-theme-bootstrap.git",
-                "reference": "b3b38f8f96c360f1a59423f8c1161c6c1428d447"
+                "reference": "1a51c722e2c0f38e19572f14ed7d41b6f5cc7a0d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-theme-bootstrap/zipball/b3b38f8f96c360f1a59423f8c1161c6c1428d447",
-                "reference": "b3b38f8f96c360f1a59423f8c1161c6c1428d447",
+                "url": "https://api.github.com/repos/phore/phore-theme-bootstrap/zipball/1a51c722e2c0f38e19572f14ed7d41b6f5cc7a0d",
+                "reference": "1a51c722e2c0f38e19572f14ed7d41b6f5cc7a0d",
                 "shasum": ""
             },
             "require": {
@@ -231,11 +243,12 @@
             "authors": [
                 {
                     "name": "Matthias Leuffen",
-                    "email": "leuffen@continue.de"
+                    "email": "m@tth.es"
                 }
             ],
             "description": "Bootstrap 4 Theme using fluent HTML",
-            "time": "2019-04-10T09:24:06+00:00"
+            "homepage": "https://infracamp.org/phore/",
+            "time": "2019-05-24T20:42:23+00:00"
         },
         {
             "name": "phore/theme-coreui",
@@ -243,12 +256,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phore/phore-theme-coreui.git",
-                "reference": "afdc045452e6f3b958ba08f5ce9280b13c4b861a"
+                "reference": "b44e0aa88feb877b0e4f9b8cdcc0e16f793268e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phore/phore-theme-coreui/zipball/afdc045452e6f3b958ba08f5ce9280b13c4b861a",
-                "reference": "afdc045452e6f3b958ba08f5ce9280b13c4b861a",
+                "url": "https://api.github.com/repos/phore/phore-theme-coreui/zipball/b44e0aa88feb877b0e4f9b8cdcc0e16f793268e7",
+                "reference": "b44e0aa88feb877b0e4f9b8cdcc0e16f793268e7",
                 "shasum": ""
             },
             "require": {
@@ -272,11 +285,12 @@
             "authors": [
                 {
                     "name": "Matthias Leuffen",
-                    "email": "leuffen@continue.de"
+                    "email": "m@tth.es"
                 }
             ],
             "description": "CoreUI theme",
-            "time": "2019-03-08T11:17:48+00:00"
+            "homepage": "https://infracamp.org/phore/",
+            "time": "2019-05-24T20:42:58+00:00"
         },
         {
             "name": "psr/container",
@@ -284,12 +298,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/container.git",
-                "reference": "014d250daebff39eba15ba990eeb2a140798e77c"
+                "reference": "fc1bc363ecf887921e3897c7b1dad3587ae154eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/container/zipball/014d250daebff39eba15ba990eeb2a140798e77c",
-                "reference": "014d250daebff39eba15ba990eeb2a140798e77c",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/fc1bc363ecf887921e3897c7b1dad3587ae154eb",
+                "reference": "fc1bc363ecf887921e3897c7b1dad3587ae154eb",
                 "shasum": ""
             },
             "require": {
@@ -325,7 +339,54 @@
                 "container-interop",
                 "psr"
             ],
-            "time": "2018-12-29T15:36:03+00:00"
+            "time": "2019-10-04T14:07:35+00:00"
+        },
+        {
+            "name": "psr/log",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/0f73288fd15629204f9d42b7055f72dacbe811fc",
+                "reference": "0f73288fd15629204f9d42b7055f72dacbe811fc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2020-03-23T09:12:05+00:00"
         }
     ],
     "packages-dev": [],
